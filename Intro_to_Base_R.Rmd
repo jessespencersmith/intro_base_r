@@ -1,0 +1,88 @@
+---
+title: "Intro_to_Base_R"
+output: html_notebook
+---
+
+We are interested in measuring the inflammation in a group of patients. 
+
+## Load Data
+
+```{r}
+library(readr)
+dat <- read_csv("data/inflammation-01.csv", 
+    col_names = FALSE)
+View(inflammation_01)
+```
+
+## Practice with Base R
+
+```{r}
+weight_kg <- 55
+weight_kg
+```
+
+Find weight in pounds
+```{r}
+2.2 * weight_kg # I THINK 2.2 is the scale
+weight_lb <- 2.2 * weight_kg
+weight_kg <- 100
+```
+```{r}
+head(dat)
+```
+```{r}
+class(dat)
+```
+```{r}
+dim(dat)
+```
+
+I want to access the first day of the first patient's data.
+
+row 1, column 1
+```{r}
+dat[1,1]
+```
+I want row 30, column 20
+```{r}
+dat[30, 20]
+```
+
+
+
+
+Combining numbers into a single object
+
+I want rows 1, 3, 5 and columns 10, 20
+```{r}
+dat[c(1, 3, 5), c(10, 20)]
+```
+
+I want rows 1-10
+```{r}
+1:10
+```
+
+
+I wanted rows 1-10, and column 2
+```{r}
+dat[1:10, 2]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
